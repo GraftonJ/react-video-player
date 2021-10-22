@@ -7,13 +7,13 @@ const SearchBar = ({ onFormSubmit }) => {
             setTerm(e.target.value)
     }
 
-    onFormSubmit = (e) => {
+    const handleFormSubmit = (e) => {
         e.preventDefault()
         onFormSubmit(term)
     }
     return (
         <div className="search-bar ui segment">
-            <form className="ui form" onSubmit={onFormSubmit}>
+            <form className="ui form" onSubmit={handleFormSubmit}>
                 <div className="field">
                 <label className="">Video Search</label>
                 <input
