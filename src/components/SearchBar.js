@@ -1,11 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 const SearchBar = ({ onFormSubmit }) => {
     const [term, setTerm] = useState('')
-    
-    const onInputChange = (e) => {
-            setTerm(e.target.value)
-    }
 
     const handleFormSubmit = (e) => {
         e.preventDefault()
@@ -20,7 +16,7 @@ const SearchBar = ({ onFormSubmit }) => {
                     placeholder="Enter search..."
                     type="text"
                     value={term}
-                    onChange={onInputChange}
+                    onChange={(e) => setTerm(e.target.value)}
                     />
                 </div>
             </form>
